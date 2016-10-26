@@ -20,26 +20,56 @@ $btn-name: (
   sm:   35px,
   md:   45.5px
 );
+.shadow{
+	@include shadow(0 0 15px rgba(11,11,12,.25));
+}
 .video{	
+	color: #fff;
 	&-wrap-big,
 	&-descr-big{
 		display: none;
 	}
-	&-wrapper{
-		color: #fff;
-	}
 	&-descr-wrap{
-		@extend .medium;
 		p{
 			line-height: 1.1;
 			margin-bottom: 25px;
 		}
 	}
 	&-btn{
+		&-click{
+			margin-bottom: 30px;
+		}
 		&-name{
 			@include font-size($btn-name);
 			line-height: 1;
 			@extend .medium;
+		}
+	}
+	&-block{
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		button{
+			@extend .shadow;
+			outline: none;
+		}
+		&-name{
+			font-size: 20px;
+		}
+		&-wrap{
+			font-size: 0;
+		}
+		&-1{
+			@include bg("../img/video1.png");
+		}
+		&-2{
+			@include bg("../img/video2.png");
+		}
+		&-3{
+			@include bg("../img/video3.png");
+		}
+		&-4{
+			@include bg("../img/video4.png");
 		}
 	}
 	@include resp-max(md){
@@ -53,13 +83,17 @@ $btn-name: (
 			text-align: center;
 		}
 		&-descr-wrap{
-			background-color: #373737;
+			@include bg("../img/linesVideo.png");
 		}
 		&-btn-name{
 			margin-top: 15px;
 		}
 		&-btn-click{
 			width: 100%;
+		}
+		&-block{
+			text-align: center;
+			padding: 30px 15px;
 		}
 	}
 	@include resp-min(md){
@@ -89,12 +123,11 @@ $btn-name: (
 		}
 		&-descr-big{
 			right: 0;
-			background-color: #373737;
+			background-color: #fff;
 			&-image{
-				position: absolute;
+			  max-width: none;
+			  position: absolute;
 			  right: 0;
-			  bottom: 0;
-			  width: 100px;
 			}
 		}
 		&-btn{
@@ -113,23 +146,61 @@ $btn-name: (
 				max-width: 315px;
 			}
 		}
-
 		&-descr-wrap{
 			margin-top: 140px;
 			font-size: 20px;
 			padding-left: 30px;
 		}
-	}
-	@include resp-min(lg){
-		&-descr-big{
-			&-image{
-				width: 231px;
+		&-block{
+			width: 50%;
+			padding: 37.5px 15px;
+			&-btn,
+			&-name{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&-btn{
+				margin-right: 15px;
 			}
 		}
+	}
+	@include resp-min(lg){
 		&-descr-wrap{
 			margin-top: 120px;
 			font-size: 25px;
 			padding-left: 50px;
+		}
+		&-block{
+			width: 25%;
+			
+			@media (max-width: 1440px){
+				&-name{
+					width: 150px;
+				}
+			}
+		}
+
+	}
+	@media (min-width: 1440px){
+		&-block{
+		  padding: 37.5px 30px;
+		}
+	}
+	@media (min-width: 1700px){
+		&-block{
+			&-name{
+				font-size: 28.35px;
+			}
+		}
+	}
+}
+.social-block{
+	@include resp-min(md){
+		width: 915px;
+		margin-left: auto;
+		margin-right: auto;
+		&-title{
+			font-size: 24px;
 		}
 	}
 }

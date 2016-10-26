@@ -6,10 +6,10 @@ Start: COLUMNS
   @include make-column(sm,"not-push","not-pull","not-offset");
 }
 @include resp-min(md){
-  @include make-column(md,"not-push","not-pull","not-offset");
+  @include make-column(md,"not-push","not-pull","offset");
 }
 @include resp-min(lg){
-  @include make-column(lg,"not-push","not-pull","not-offset");
+  @include make-column(lg,"not-push","not-pull","offset");
 }
 
 /* =====================
@@ -128,10 +128,10 @@ End:  HIDDEN AND VISIBLE UTILITIES
     }
   }
   @include resp-max($br-name){
-    .max-#{$br-name}-negative{
-      margin-left: -15px;
-      margin-right: -15px;
-    }
+    // .max-#{$br-name}-negative{
+    //   margin-left: -15px;
+    //   margin-right: -15px;
+    // }
     // .max-#{$br-name}-nom{
     //   margin-bottom: 0 !important;
     // }

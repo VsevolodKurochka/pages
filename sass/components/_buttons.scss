@@ -110,7 +110,7 @@
     background-color: setColor(corp);
     color: #bd0000;
     &:before{
-      background-color: lighten(setColor(corp), 10%);
+      background-color: lighten(setColor(corp), 40%);
     }
   }
   &-single{

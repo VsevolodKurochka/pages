@@ -18,6 +18,11 @@ Start: START FOOTER
 	&-logo{
 		font-size: 0;
 	}
+	&-text{
+		@include resp-max(md){
+			margin-top: 15px;
+		}
+	}
 }
 /* =====================
 End:  START FOOTER
