@@ -1,0 +1,24 @@
+/* ===================== 
+Start: START FOOTER      
+======================== */
+.footer{
+	@extend .cf;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #f2f2f2;
+	&-b{
+		@extend .block-inline;
+		vertical-align: middle;
+		margin: 0 15px;
+	}
+	a{
+		@extend .tdn;
+		@extend .light !optional;
+	}
+	&-logo{
+		font-size: 0;
+	}
+}
+/* =====================
+End:  START FOOTER
+======================== */

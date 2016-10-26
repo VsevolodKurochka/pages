@@ -1,0 +1,36 @@
+body{
+  color: setColor(black);
+  @extend .regular;
+  font-size: 18px;
+  line-height: 1.42857143;
+  &.active{
+    overflow-y: hidden;
+    //padding-right: 17px;
+  }
+}
+img{
+  @extend .block-inline;
+  max-width: 100%;
+}
+input{
+  &:focus{
+    &::-webkit-input-placeholder{
+      color: transparent;
+    }
+    &:-moz-placeholder {
+      color: transparent;
+    }
+    &::-moz-placeholder {
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+}
+a,button{
+  cursor: pointer;
+}
+strong,.strong,b,.b{
+  @extend .blacks !optional;
+}

@@ -1,0 +1,23 @@
+.header {
+	@extend .cf;
+	padding-bottom: 25px;
+	min-height: 50px;
+	@include bg('../img/header.jpg');
+	&-text{
+		@extend .block-inline;
+		padding: 0.5em 0;
+		color: setColor(corp);
+		@extend .bold;
+	}
+	@include resp-max(md){
+		&-logo{
+			margin-top: 40px;
+		}
+	}
+	@include resp-min(md){
+		padding-top: 10px;
+		&-container-text{
+			margin-top: 50px;
+		}
+	}
+}
